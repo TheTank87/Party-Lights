@@ -6,7 +6,7 @@
 > [!NOTE]
 > This devlog is mirrored from [Half Life](https://halflife.hackclub.com) ([open the project](https://halflife.hackclub.com/projects/slkmggldznhtv6qeg5q8d5ue)). Editing it here will not change the platform's copy, and the next sync overwrites this file.
 
-> I'm gonna design a board that can turn on random LEDs using buttons.
+> A cool LED board that I will combine past project components and new ones into to create a novel board that does cool things.
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |
