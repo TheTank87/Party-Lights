@@ -30,10 +30,17 @@ A custom designed PCB that can track humidity, temperature, air pressure, and ai
 | Estimated total shipping | 1 | N/A | $0.00 | $0.00 | N/A |
 | **Grand Total** | | | | **$32.17** | |
 
+# Cad Modeling
+
+<img width="1065" height="522" alt="Screenshot 2026-10-29 at 10 39 27 AM" src="https://github.com/user-attachments/assets/7ad9bbb8-b1a8-4ebd-9318-a9d79218a040" />
+
+
+The cad part was by far the most fun part of this project. I first had to list out what components I want to use because that's really important. Then I have to track down the correct symbols and footprints and sometimes sensors just need a pinheader connection to work. Wiring was pretty easy once I studied what power sources are mandatory and where data should go. I then added a ceramic capacitator to ease electrical noise since my board will be handling lots of data in real time. Bringing the board over to the PCB section I quickly designed the shape and I oriented and wired everything up pretty smoothly. It's like building with LEGO Technics.
+
 # Firmware
 
 ## Description
-The **Tropical Fruit Bowl** firmware is a an app built on Ardunion C++ designed to showcase the sensors. It features Starbie-like mechanics but the UI is really different. That is because it includes 3 interactive windows for data viewing. So actually, to be honest I had very little time to master C++, but I know the basic structure of it. However, I am fluent in python and structuring backend things before. So to be completely transparent, most of the heavy lifting was done by AI, but I guided it so that the architecture of the app is correct and the functions does what I actually want. I also went in and checked the code a few times and made some adjustments and made cohesive comments on what some important parts does. Also I made sure to comment on parts that changes the background colors and stuff just in case anyone wants to use my firmware but also customize it. Most of the time was spent on designing the app and what functions and features it should have, as well as failure prevention systems that prevents unwanted actions done if someone were to, for example, push the slider in the main menu. I had to make sure that they do nothing while in certain areas of the app. 
+The **Tropical Fruit Bowl** firmware is a an app built on Ardunion C++ designed to showcase the sensors. It features Starbie-like mechanics but the UI is really different. That is because it includes 3 interactive windows for data viewing. I spent the most time designing the firmware and you can see how it should work with the mermaid diagram below. I also decided to add a dedicated section for color customization just in case anyone wants to use this project for themselves. 
 
 ## Features
 * **Gyro-Controlled UI**: Moves the cursor, inspired from Starbie.
@@ -58,3 +65,5 @@ The **Tropical Fruit Bowl** firmware is a an app built on Ardunion C++ designed 
 | **Slide Potentiometer (RV1)** | `D3 (Analog)` | **Y-Axis Graph Control:** Controls the y-axis viewing on graphs. |
 | **Rotary Encoder (SW3)** | `D1 / D2` | **X-Axis Graph Control:** Does what the top did but on the x-axis. |
 
+### Assembly
+Assembling this really shouldn't be a problem because I designed the pcb so that all components will have space inbetween other components, so one shouldn't worry about overlapping components. The sensors especiallu the gyroscope an air quality sensors should come with pin headers in the package so I wouldn't buy generic pin heads seperately.
