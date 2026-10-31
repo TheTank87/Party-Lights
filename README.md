@@ -58,11 +58,11 @@ The **Tropical Fruit Bowl** firmware is a an app built on Ardunion C++ designed 
 
 | Hardware Component | Pin/Interface | Function in Firmware |
 | :--- | :--- | :--- |
-| **Switch 1 (SW1)** | `D8` | **Power / Menu:** Start and exit key. |
-| **Switch 2 (SW2)** | `D7` | **Select / Click:** Your left mouse button.|
-| **MPU6050 IMU** | `I2C` | **Cursor Movement:** Moving the mouse.|
-| **Slide Potentiometer (RV1)** | `D3 (Analog)` | **Y-Axis Graph Control:** Controls the y-axis viewing on graphs. |
-| **Rotary Encoder (SW3)** | `D1 / D2` | **X-Axis Graph Control:** Does what the top did but on the x-axis. |
+| **Switch 1 (SW1)** | `D8` | **Power / Menu:**|
+| **Switch 2 (SW2)** | `D7` | **Select / Click:**|
+| **MPU6050 IMU** | `I2C` | **Cursor Movement:**|
+| **Slide Potentiometer (RV1)** | `D3 (Analog)` | **Y-Axis Graph Control:**|
+| **Rotary Encoder (SW3)** | `D1 / D2` | **X-Axis Graph Control:**|
 
 ### Assembly
 Assembling this really shouldn't be a problem because I designed the pcb so that all components will have space inbetween other components, so one shouldn't worry about overlapping components. The sensors especiallu the gyroscope an air quality sensors should come with pin headers in the package so I wouldn't buy generic pin heads seperately.
