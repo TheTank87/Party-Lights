@@ -1,0 +1,12 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"C1","0.1uF","C_0603_1608Metric",196.000000,-62.275000,90.000000,top
+"J1","OLED","Display_128x64_096_I2C",131.500000,-60.492000,0.000000,top
+"J2","ENS160+AHT21 module","PinHeader_1x08_P2.54mm_Vertical",90.500000,-91.240000,180.000000,top
+"J3","MPU6050","PinHeader_1x08_P2.54mm_Vertical",97.500000,-73.500000,0.000000,top
+"R1","10K","R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal",111.380000,-60.000000,180.000000,top
+"RV1","Slider","Potentiometer_Bourns_PTA1543_Single_Slide",159.480000,-88.250000,0.000000,top
+"SW1","SW_Push","Kailh Choc Low-Profile Switches",122.280000,-97.700000,0.000000,top
+"SW2","SW_Push","Kailh Choc Low-Profile Switches",140.500000,-97.500000,0.000000,top
+"SW3","RotaryEncoder_Switch_MP","RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm",152.000000,-64.000000,0.000000,top
+"U1","XIAO-ESP32-C3-SMD","XIAO-ESP32-C6-DIP",183.380000,-66.620000,90.000000,top
+"U2","DHT11","Aosong_DHT11_5.5x12.0_P2.54mm",111.500000,-67.500000,-90.000000,top
