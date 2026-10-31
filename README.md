@@ -46,24 +46,43 @@ The **Tropical Fruit Bowl** firmware is a an app built on Ardunion C++ designed 
 ## Firmware Flow Chart
 
 ```mermaid
+
 graph TD
+
     OFF((State: OFF)) -->|Press SW1| INTRO[Intro Screen & Fade To Black]
+
     INTRO --> MAIN[Main Menu<br>View Readings]
+
     
+
     MAIN -->|Hover S1 + Press SW2| S1[Sensor 1: DHT11<br>Temp & Humidity]
+
     MAIN -->|Hover S2 + Press SW2| S2[Sensor 2: ENS160+AHT21<br>Air Quality]
+
     MAIN -->|Hover S3 + Press SW2| S3[Sensor 3: MPU6050<br>IMU Data]
+
     
+
     S1 -->|Hover 'Back' + Press SW2| MAIN
+
     S2 -->|Hover 'Back' + Press SW2| MAIN
+
     S3 -->|Hover 'Back' + Press SW2| MAIN
+
     
+
     MAIN -.->|Press SW1| POPUP{Exit Pop-Up}
+
     S1 -.->|Press SW1| POPUP
+
     S2 -.->|Press SW1| POPUP
+
     S3 -.->|Press SW1| POPUP
+
     
+
     POPUP -->|Hover 'Yes' + Press SW2| CLOSE[Close Pop-up<br>Return to previous state]
+
     POPUP -->|Hover 'No' + Press SW2| OFF
 
 ```
