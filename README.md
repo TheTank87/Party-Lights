@@ -30,3 +30,50 @@ A custom designed PCB that can track humidity, temperature, air pressure, and ai
 | Estimated total shipping | 1 | N/A | $0.00 | $0.00 | N/A |
 | **Grand Total** | | | | **$32.17** | |
 
+# Firmware
+
+## Description
+The **Tropical Fruit Bowl** firmware is a an app built on Ardunion C++ designed to showcase the sensors. It features Starbie-like mechanics but the UI is really different. That is because it includes 3 interactive windows for data viewing. So actually, to be honest I had very little time to master C++, but I know the basic structure of it. However, I am fluent in python and structuring backend things before. So to be completely transparent, most of the heavy lifting was done by AI, but I guided it so that the architecture of the app is correct and the functions does what I actually want. I also went in and checked the code a few times and made some adjustments and made cohesive comments on what some important parts does. Also I made sure to comment on parts that changes the background colors and stuff just in case anyone wants to use my firmware but also customize it. Most of the time was spent on designing the app and what functions and features it should have, as well as failure prevention systems that prevents unwanted actions done if someone were to, for example, push the slider in the main menu. I had to make sure that they do nothing while in certain areas of the app. 
+
+## Features
+* **Gyro-Controlled UI**: Moves the cursor, inspired from Starbie.
+* **Smart UI Highlighting**: Highlights where your cursor is.
+* **Cinematic Boot Sequence**: Intro screen
+* **Live Dynamic Graphing**: Dynamic datas.
+* **Interrupt-Driven Rotary Encoder**: Adjusts graphs to view liking.
+* **Universal Exit System**: Asks if you want to exit, instead of just turning off instantly.
+
+## Firmware Flow Chart
+
+```mermaid
+graph TD
+    OFF((State: OFF)) -->|Press SW1| INTRO[Intro Screen & Fade To Black]
+    INTRO --> MAIN[Main Menu<br>View Readings]
+    
+    MAIN -->|Hover S1 + Press SW2| S1[Sensor 1: DHT11<br>Temp & Humidity]
+    MAIN -->|Hover S2 + Press SW2| S2[Sensor 2: ENS160+AHT21<br>Air Quality]
+    MAIN -->|Hover S3 + Press SW2| S3[Sensor 3: MPU6050<br>IMU Data]
+    
+    S1 -->|Hover 'Back' + Press SW2| MAIN
+    S2 -->|Hover 'Back' + Press SW2| MAIN
+    S3 -->|Hover 'Back' + Press SW2| MAIN
+    
+    MAIN -.->|Press SW1| POPUP{Exit Pop-Up}
+    S1 -.->|Press SW1| POPUP
+    S2 -.->|Press SW1| POPUP
+    S3 -.->|Press SW1| POPUP
+    
+    POPUP -->|Hover 'Yes' + Press SW2| CLOSE[Close Pop-up<br>Return to previous state]
+    POPUP -->|Hover 'No' + Press SW2| OFF
+```
+
+## Hardware Controls
+
+| Hardware Component | Pin/Interface | Function in Firmware |
+| :--- | :--- | :--- |
+| **Switch 1 (SW1)** | `D8` | **Power / Menu:** Start and exit key. |
+| **Switch 2 (SW2)** | `D7` | **Select / Click:** Your left mouse button.|
+| **MPU6050 IMU** | `I2C` | **Cursor Movement:** Moving the mouse.|
+| **Slide Potentiometer (RV1)** | `D3 (Analog)` | **Y-Axis Graph Control:** Controls the y-axis viewing on graphs. |
+| **Rotary Encoder (SW3)** | `D1 / D2` | **X-Axis Graph Control:** Does what the top did but on the x-axis. |
+
