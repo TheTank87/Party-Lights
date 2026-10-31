@@ -65,6 +65,7 @@ graph TD
     
     POPUP -->|Hover 'Yes' + Press SW2| CLOSE[Close Pop-up<br>Return to previous state]
     POPUP -->|Hover 'No' + Press SW2| OFF
+
 ```
 
 ## Hardware Controls
