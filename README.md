@@ -43,12 +43,11 @@ The cad part was by far the most fun part of this project. I first had to list o
 The **Tropical Fruit Bowl** firmware is a an app built on Ardunion C++ designed to showcase the sensors. It features Starbie-like mechanics but the UI is really different. That is because it includes 3 interactive windows for data viewing. I spent the most time designing the firmware and you can see how it should work with the mermaid diagram below. I also decided to add a dedicated section for color customization just in case anyone wants to use this project for themselves. 
 
 ## Features
-* **Gyro-Controlled UI**: Moves the cursor, inspired from Starbie.
-* **Smart UI Highlighting**: Highlights where your cursor is.
-* **Cinematic Boot Sequence**: Intro screen
-* **Live Dynamic Graphing**: Dynamic datas.
-* **Interrupt-Driven Rotary Encoder**: Adjusts graphs to view liking.
-* **Universal Exit System**: Asks if you want to exit, instead of just turning off instantly.
+* Moves the cursor, inspired from Starbie, and highlights where your cursor is.
+* Intro screen
+* Dynamic datas.
+* Components adjusts graphs to view liking.
+* Asks if you want to exit, instead of just turning off instantly.
 
 ## Firmware Flow Chart
 
